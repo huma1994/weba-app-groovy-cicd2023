@@ -6,9 +6,9 @@ pipeline{
     stages{
         stage('Deploy to Remote WebServer or Container')
             steps{
-                sh 'scp -r ${WORKSPACE}${fil} root@${staging_server}:/usr/share/nginx/html/star'
+                sh 'scp -r ${WORKSPACE}/* root@${staging_server}:/usr/share/nginx/html/star'
                 
             }
         }
     }
-
+}
